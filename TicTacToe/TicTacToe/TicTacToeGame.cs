@@ -31,8 +31,7 @@ namespace TicTacToe
                 Console.WriteLine("Please Choose your letter from X or O");
                 char UserLetter = Console.ReadLine()[0];
                 UserLetter = char.ToUpper(UserLetter);
-                while (UserLetter != 'X' && UserLetter != 'O')
-                {
+                while (UserLetter != 'X' && UserLetter != 'O' && UserLetter !='x' && UserLetter !='o')                {
                     Console.WriteLine("Invalid move.\nChoose again from X/O: \n");
                     UserLetter = Console.ReadLine()[0];
                 }
