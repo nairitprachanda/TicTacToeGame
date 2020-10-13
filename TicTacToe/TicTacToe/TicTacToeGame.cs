@@ -10,10 +10,12 @@ namespace TicTacToe
         {
             static void Main(string[] args)
             {
-                Console.WriteLine("Welcome to the TicTacToe Game!");
-                CreateBoard();
-                Console.WriteLine("Tic TaC Toe board created.");
+                Console.WriteLine("Welcome to the TicTacToe Game!\n");
+                char[] BOARD=CreateBoard();
+                Console.WriteLine("Tic TaC Toe board created. \n");
                 ChooseUserLetter();
+                Console.WriteLine("Showing Game Board\n");
+                ShowBoard(BOARD);
             }
             static char[] CreateBoard()
             {
@@ -31,10 +33,19 @@ namespace TicTacToe
                 UserLetter = char.ToUpper(UserLetter);
                 while (UserLetter != 'X' && UserLetter != 'O')
                 {
-                    Console.WriteLine("Invalid move.\nChoose again from X/O: ");
+                    Console.WriteLine("Invalid move.\nChoose again from X/O: \n");
                     UserLetter = Console.ReadLine()[0];
                 }
                 return UserLetter;
+            }
+            static void ShowBoard(char [] BOARD)
+            {
+                Console.WriteLine(BOARD[1] + "|" + BOARD[2] + "|" + BOARD[3] + "\n");
+                Console.WriteLine("________________\n");
+                Console.WriteLine(BOARD[4] + "|" + BOARD[5] + "|" + BOARD[6] + "\n");
+                Console.WriteLine("________________\n");
+                Console.WriteLine(BOARD[7] + "|" + BOARD[8] + "|" + BOARD[9] + "\n");
+                return;
             }
         }
 
