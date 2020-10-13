@@ -16,9 +16,9 @@ namespace TicTacToe
             static char[] CreateBoard()
             {
                 char[] board = new char[10];
-                for (int spaceIndex = 1; spaceIndex < board.Length; spaceIndex++)
+                for (int i = 1; i < board.Length; i++)
                 {
-                    board[spaceIndex] = ' ';
+                    board[i] = ' ';
                 }
                 return board;
             }
