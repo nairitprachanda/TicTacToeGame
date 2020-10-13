@@ -12,7 +12,6 @@ namespace TicTacToe
             {
                 Console.WriteLine("Welcome to the TicTacToe Game!");
                 CreateBoard();
-                Console.WriteLine("Board created.");
             }
             static char[] CreateBoard()
             {
